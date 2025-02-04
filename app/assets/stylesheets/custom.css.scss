@@ -84,49 +84,11 @@
   color: #A3C585 !important; /* ホバー時に少し明るく */
 }
 
-
-/* ログインページのカードスタイル */
-.auth-card {
-  background-color: #5A7052 !important; /* アースカラーのグリーン */
-  color: #ffffff !important; /* 文字色は白 */
-  border-radius: 12px; /* 角を少し丸く */
-  padding: 30px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+/* 都道府県（select）と市区町村（text_field）のサイズを統一 */
+.auth-card .form-control,
+.auth-card .form-select {
+  height: 45px; /* 高さを統一 */
+  font-size: 1rem; /* フォントサイズも統一 */
+  padding: 10px;
 }
 
-/* フォームのデザイン */
-.auth-card .form-control {
-  background-color: #ffffff !important; /* 入力欄は白 */
-  color: #333 !important; /* 文字色は黒系 */
-  border: 2px solid #D9CBA7 !important; /* ベージュの枠線 */
-  border-radius: 8px;
-}
-
-.auth-card .form-control:focus {
-  border-color: #A3C585 !important; /* フォーカス時はライトグリーン */
-  box-shadow: 0 0 8px rgba(163, 197, 133, 0.5);
-}
-
-/* ボタンのデザイン */
-.auth-card .btn-primary {
-  background-color: #D9CBA7 !important; /* ベージュ系 */
-  color: #5A7052 !important; /* 文字色はグリーン */
-  border: none;
-  font-size: 1.2rem;
-  padding: 12px;
-  border-radius: 8px;
-}
-
-.auth-card .btn-primary:hover {
-  background-color: #A3C585 !important; /* ライトグリーンに変化 */
-}
-
-/* リンクのデザイン */
-.auth-card a {
-  color: #D9CBA7 !important;
-  text-decoration: none;
-}
-
-.auth-card a:hover {
-  color: #A3C585 !important; /* ホバー時に少し明るく */
-}
