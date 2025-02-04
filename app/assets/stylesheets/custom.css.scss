@@ -1,0 +1,39 @@
+/* ナビバーのカスタマイズ */
+.navbar-custom {
+  background-color: #5A7052 !important; /* アースカラー（深めのグリーン） */
+  color: #ffffff !important;
+  padding-top: 2rem !important; /* ナビバーの高さ調整 */
+  padding-bottom: 2rem !important;
+}
+
+/* One Match ロゴのスタイル */
+.navbar-custom .navbar-brand {
+  color: #ffffff !important;  /* 白色に設定 */
+  font-size: 3rem !important;  /* 文字を大きく */
+  font-weight: bold;  /* 太字 */
+  letter-spacing: 2px;  /* 文字間隔を広げる */
+  margin-right: 50px; /* 右側に余白を作る */
+  padding: 10px 20px;
+}
+
+/* ログイン・新規登録のボタン風デザイン */
+.navbar-custom .nav-item .nav-link {
+  padding: 8px 16px !important;  /* ボタンの中の余白 */
+  border-radius: 20px !important;  /* 角を丸くする */
+  border: 2px solid #D9CBA7 !important;  /* ベージュ系の枠線 */
+  background-color: transparent !important;  /* 背景を透明に */
+  transition: 0.3s;  /* なめらかな変化 */
+  font-size: 1.5rem !important;  /* 文字を大きく */
+  color: #ffffff !important;  /* 白色に設定 */
+}
+
+/* ホバー時のエフェクト */
+.navbar-custom .nav-item .nav-link:hover {
+  background-color: #D9CBA7 !important;  /* ホバー時に色をつける */
+  color: #5A7052 !important;  /* ホバー時に緑色へ */
+}
+
+/* ナビゲーションバーの間隔を調整 */
+.navbar-custom .navbar-nav {
+  gap: 15px; /* ログイン・新規登録ボタンの間隔を開ける */
+}
