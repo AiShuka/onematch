@@ -1,0 +1,94 @@
+/* ナビバーのカスタマイズ */
+.navbar-custom {
+  background-color: #5A7052 !important; /* アースカラー（深めのグリーン） */
+  color: #ffffff !important;
+  padding-top: 2rem !important; /* ナビバーの高さ調整 */
+  padding-bottom: 2rem !important;
+}
+
+/* One Match ロゴのスタイル */
+.navbar-custom .navbar-brand {
+  color: #ffffff !important;  /* 白色に設定 */
+  font-size: 3rem !important;  /* 文字を大きく */
+  font-weight: bold;  /* 太字 */
+  letter-spacing: 2px;  /* 文字間隔を広げる */
+  margin-right: 50px; /* 右側に余白を作る */
+  padding: 10px 20px;
+}
+
+/* ログイン・新規登録のボタン風デザイン */
+.navbar-custom .nav-item .nav-link {
+  padding: 8px 16px !important;  /* ボタンの中の余白 */
+  border-radius: 30px !important;  /* 角を丸くする */
+  border: 2px solid #D9CBA7 !important;  /* ベージュ系の枠線 */
+  background-color: transparent !important;  /* 背景を透明に */
+  transition: 0.3s;  /* なめらかな変化 */
+  font-size: 1.5rem !important;  /* 文字を大きく */
+  color: #ffffff !important;  /* 白色に設定 */
+}
+
+/* ホバー時のエフェクト */
+.navbar-custom .nav-item .nav-link:hover {
+  background-color: #D9CBA7 !important;  /* ホバー時に色をつける */
+  color: #5A7052 !important;  /* ホバー時に緑色へ */
+}
+
+/* ナビゲーションバーの間隔を調整 */
+.navbar-custom .navbar-nav {
+  gap: 15px; /* ログイン・新規登録ボタンの間隔を開ける */
+}
+
+/* ログインページのカードスタイル */
+.auth-card {
+  background-color: #5A7052 !important; /* アースカラーのグリーン */
+  color: #ffffff !important; /* 文字色は白 */
+  border-radius: 12px; /* 角を少し丸く */
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+}
+
+/* フォームのデザイン */
+.auth-card .form-control {
+  background-color: #ffffff !important; /* 入力欄は白 */
+  color: #333 !important; /* 文字色は黒系 */
+  border: 2px solid #D9CBA7 !important; /* ベージュの枠線 */
+  border-radius: 8px;
+}
+
+.auth-card .form-control:focus {
+  border-color: #A3C585 !important; /* フォーカス時はライトグリーン */
+  box-shadow: 0 0 8px rgba(163, 197, 133, 0.5);
+}
+
+/* ボタンのデザイン */
+.auth-card .btn-primary {
+  background-color: #D9CBA7 !important; /* ベージュ系 */
+  color: #5A7052 !important; /* 文字色はグリーン */
+  border: none;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.auth-card .btn-primary:hover {
+  background-color: #A3C585 !important; /* ライトグリーンに変化 */
+}
+
+/* リンクのデザイン */
+.auth-card a {
+  color: #D9CBA7 !important;
+  text-decoration: none;
+}
+
+.auth-card a:hover {
+  color: #A3C585 !important; /* ホバー時に少し明るく */
+}
+
+/* 都道府県（select）と市区町村（text_field）のサイズを統一 */
+.auth-card .form-control,
+.auth-card .form-select {
+  height: 45px; /* 高さを統一 */
+  font-size: 1rem; /* フォントサイズも統一 */
+  padding: 10px;
+}
+

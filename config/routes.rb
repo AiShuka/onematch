@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  Rails.application.routes.draw do
-    root "pages#top"
-  end
+  root to: "home#index"
+  devise_for :users
+
+  resources :users, only: [:show]
 end
