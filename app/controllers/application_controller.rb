@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     root_path # ログイン後にマイページへリダイレクト
   end
 
+  def after_sign_out_path_for(resource_or_scope)
+    root_path # トップページにリダイレクト
+  end
+
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]  # 環境変数を読み込む記述に変更

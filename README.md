@@ -22,7 +22,7 @@ password:1111
 | Column        | Type        | Options                         |
 |---------------|-------------|---------------------------------|
 | name          | string      | null: false                     |
-| breed         | string      | null: false                     |
+| breed_id         | string      | null: false                     |
 | age           | integer     | null: false                     |
 | gender        | string      | null: false                     |
 | user          | references  | null: false, foreign_key: true  |

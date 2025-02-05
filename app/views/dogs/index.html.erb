@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card auth-card">
+        <h2 class="text-center mb-4">ワンちゃん一覧</h2>
+
+        <% if @dogs.any? %>
+          <ul class="list-group">
+            <% @dogs.each do |dog| %>
+              <li class="list-group-item">
+                <strong><%= dog.name %></strong>（<%= ddog.breed.name %>・<%= dog.age %>歳・<%= dog.gender %>）
+                <p><%= dog.personality %></p>
+              </li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p class="text-center">まだワンちゃんの情報がありません。</p>
+        <% end %>
+
+        <div class="text-center mt-3">
+          <%= link_to "ワンちゃんを登録する", new_dog_path, class: "btn btn-primary w-50 d-block mx-auto" %>
+          <%= link_to "戻る", user_path(current_user), class: "d-block" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

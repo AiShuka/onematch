@@ -92,3 +92,109 @@
   padding: 10px;
 }
 
+.dog-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 画像とテキストの間隔 */
+  padding: 10px;
+}
+
+.dog-profile img {
+  border-radius: 50%; /* 画像を丸く */
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* 画像をきれいにトリミング */
+}
+
+.dog-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-upload-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.dog-image {
+  width: 150px;      /* 画像の幅 */
+  height: 150px;     /* 画像の高さ */
+  object-fit: cover; /* アスペクト比を保持しつつ枠にフィット */
+  border-radius: 50%; /* 丸く表示（既にrounded-circleを適用してるなら不要） */
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* ホバー時に表示 */
+}
+
+.input-group-text {
+  cursor: pointer;
+}
+
+.input-group-text:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa; /* 背景色 */
+  border: 2px dashed #ccc; /* 枠線 */
+}
+
+.dog-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 14px;
+  display: none; /* 画像未選択時は非表示 */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* ホバー時に表示 */
+}
+
+
+
+/* 未選択の時の表示 */
+.dog-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #777;
+  background: #f8f9fa;
+  border-radius: 50%;
+}
+
+/* 未選択の時のホバー */
+.image-container:hover .dog-image-placeholder {
+  background: #ddd;
+  color: #333;
+}
