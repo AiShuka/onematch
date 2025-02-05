@@ -42,7 +42,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_05_062845) do
   create_table "dogs", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
     t.string "breed"
-    t.integer "age"
     t.text "personality"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
