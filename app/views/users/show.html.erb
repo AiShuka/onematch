@@ -1,7 +1,54 @@
-<h1><%= @user.nickname %> さんのマイページ</h1>
-<p>Email: <%= @user.email %></p>
-<p>都道府県: <%= @user.prefecture.name if @user.prefecture_id.present? %></p>
-<p>市区町村: <%= @user.city %></p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card auth-card">
+        <h2 class="text-center mb-4"><%= @user.nickname %> さんのマイページ</h2>
 
-<%= link_to "編集", edit_user_registration_path, class: "btn btn-primary" %>
-<%= link_to "戻る", root_path, class: "btn btn-secondary" %>
+        <div class="mb-3">
+          <p><strong>都道府県：</strong> <%= @user.prefecture.name if @user.prefecture_id.present? %></p>
+          <p><strong>市区町村：</strong> <%= @user.city %></p>
+        </div>
+
+        <div class="text-center mb-3">
+          <%= link_to "アカウント情報の編集", edit_user_registration_path, class: "btn btn-primary w-50 d-block mx-auto" %>
+        </div>
+
+        <hr>
+
+        <h3 class="text-center">ワンちゃんの情報</h3>
+
+        <% if @user.dogs.any? %>
+          <ul class="list-group">
+            <% @user.dogs.each do |dog| %>
+              <li class="list-group-item d-flex align-items-center justify-content-between" style="background-color: <%= cycle('#EDE8D5', '#E3F0AF') %>;">
+                <div class="d-flex align-items-center">
+                  <% if dog.image.attached? %>
+                    <%= image_tag dog.image, class: "rounded-circle me-3", width: 100, height: 100 %>
+                  <% end %>
+                  <div>
+                    <strong><%= dog.name %></strong>
+                    <p class="mb-1">犬種: <%= dog.breed %></p>
+                    <p class="mb-1">年齢: <%= dog.age %></p>
+                    <p class="mb-1">性別: <%= dog.gender %></p>
+                    <p class="mb-0">生年月日: <%= dog.birthdate.strftime("%Y年%m月%d日") if dog.birthdate.present? %></p>
+                  </div>
+                </div>
+                <div class="ms-auto">
+                  <%= link_to "✏️", edit_dog_path(dog), class: "btn btn-outline-secondary btn-sm" %>
+                </div>
+              </li>
+            <% end %>
+
+          </ul>
+        <% else %>
+          <p class="text-center">まだワンちゃんの情報がありません。</p>
+        <% end %>
+
+        <div class="text-center mt-3">
+          <%= link_to "ワンちゃんを登録する", new_dog_path, class: "btn btn-primary w-50 d-block mx-auto" %>
+          <%= link_to "戻る", root_path, class: "d-block" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

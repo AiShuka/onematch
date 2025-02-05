@@ -92,3 +92,21 @@
   padding: 10px;
 }
 
+.dog-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 画像とテキストの間隔 */
+  padding: 10px;
+}
+
+.dog-profile img {
+  border-radius: 50%; /* 画像を丸く */
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* 画像をきれいにトリミング */
+}
+
+.dog-info {
+  display: flex;
+  flex-direction: column;
+}
