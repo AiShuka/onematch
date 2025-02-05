@@ -24,7 +24,7 @@ class DogsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
-  end
+  end  
 
   def destroy
     @dog.destroy

@@ -1,9 +1,12 @@
 class Dog < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :breed
   belongs_to :user
   has_one_attached :image  # 👈 画像を保存できるようにする！
 
   validates :name, :breed, :birthdate, :gender, presence: true
   validates :gender, inclusion: { in: %w(オス メス) }
+  validates :breed_id, presence: true
 
   # 年齢を計算するメソッド（〇歳〇ヶ月で表示）
   def age

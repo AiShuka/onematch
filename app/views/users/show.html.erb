@@ -23,11 +23,11 @@
               <li class="list-group-item d-flex align-items-center justify-content-between" style="background-color: <%= cycle('#EDE8D5', '#E3F0AF') %>;">
                 <div class="d-flex align-items-center">
                   <% if dog.image.attached? %>
-                    <%= image_tag dog.image, class: "rounded-circle me-3", width: 100, height: 100 %>
+                    <%= image_tag dog.image, class: "dog-image rounded-circle" %>
                   <% end %>
                   <div>
                     <strong><%= dog.name %></strong>
-                    <p class="mb-1">犬種: <%= dog.breed %></p>
+                    <p class="mb-1">犬種: <%= dog.breed.name %></p>
                     <p class="mb-1">年齢: <%= dog.age %></p>
                     <p class="mb-1">性別: <%= dog.gender %></p>
                     <p class="mb-0">生年月日: <%= dog.birthdate.strftime("%Y年%m月%d日") if dog.birthdate.present? %></p>
