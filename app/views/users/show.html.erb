@@ -3,12 +3,7 @@
     <div class="col-md-8">
       <div class="card auth-card">
         <h2 class="text-center mb-4"><%= @user.nickname %> さんのマイページ</h2>
-
-        <div class="mb-3">
-          <p><strong>都道府県：</strong> <%= @user.prefecture.name if @user.prefecture_id.present? %></p>
-          <p><strong>市区町村：</strong> <%= @user.city %></p>
-        </div>
-
+        
         <div class="text-center mb-3">
           <%= link_to "アカウント情報の編集", edit_user_registration_path, class: "btn btn-primary w-50 d-block mx-auto" %>
         </div>

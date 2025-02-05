@@ -159,3 +159,12 @@
 .image-container:hover .image-overlay {
   opacity: 1; /* ホバー時に表示 */
 }
+
+.input-group-text {
+  cursor: pointer;
+}
+
+.input-group-text:hover {
+  background-color: #0056b3;
+  color: white;
+}
